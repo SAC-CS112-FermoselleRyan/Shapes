@@ -1,0 +1,29 @@
+
+public abstract class Tetrahedron extends ThreeDimensionalShapes {
+
+	
+
+    public double computeArea()
+    {
+
+        double tetrahedronSurfaceArea;
+        tetrahedronSurfaceArea = 4*((Math.sqrt(3)/4) *side*side);
+        return tetrahedronSurfaceArea;
+    }
+
+    public double computeVolume()
+    {
+        double tetrahedronVolume;
+        tetrahedronVolume = (1/3) * (((Math.sqrt(3))/4)*side*side) * height;
+        return tetrahedronVolume;
+    }
+
+    public String toString()
+    {
+        String tetrahedronResult = "area is " + computeArea() + "\n";
+        tetrahedronResult = tetrahedronResult + "volume is " + computeVolume() + "\n";
+        return tetrahedronResult;
+    }
+	
+	
+}
