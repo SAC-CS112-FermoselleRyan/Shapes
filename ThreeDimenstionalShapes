@@ -1,0 +1,42 @@
+
+abstract class ThreeDimensionalShapes extends Shapes  {
+
+	public void ThreeDimensionalShape (int x , int y , int d1 , int d2 , int d3)
+	{
+		super(x,y);
+		int dimension1 = d1;
+		int dimension2 = d2;
+	int	dimension3 = d3;
+	}
+	
+	public void setDimension1(int d, int dimension1)
+	{
+		dimension1 = d;
+	}
+	public void setDimension2(int d, int dimension2)
+	{
+		dimension2 = d;
+	}
+	public void setDimension3(int d, int dimension3)
+	{
+		dimension3 = d;
+	}
+	
+	public int getDimension1()
+	{
+		return getDimension1();
+	}
+	public int getDimension2()
+	{
+		return getDimension2();
+	}
+	public int getDimension3()
+	{
+		return getDimension3();
+	}
+	public abstract int area();
+	public abstract int volume();
+	
+	
+	
+}
