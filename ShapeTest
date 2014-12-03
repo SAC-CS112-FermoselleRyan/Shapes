@@ -1,0 +1,43 @@
+
+public class ShapeTest {
+	
+	 public static void main(String[] args)
+	 {
+	 Circle circle = new Circle(7);
+	 Sphere sphere = new Sphere(11);
+	 Tetrahedron tetra = new Tetrahedron(6.4);
+	 Shapes[] shapes = new Shapes[6];
+
+	 shapes[2] = circle;
+	 shapes[3] = sphere;
+	 shapes[5] = tetra;
+	 
+	 for(int i = 0; i < shapes.length; i++)
+	 {
+	 System.out.printf("Shape[%d] is a %s\n",
+	 i, shapes[i].getClass().getSimpleName());
+	 }
+	 System.out.println();
+	 
+	 ThreeDimensionalShapes shape3D;
+	 
+	 for(Shapes shape : shapes)
+	 {
+	 System.out.print(shape);
+	 
+	 if(shape instanceof TwoDimensionalShapes)
+	 {
+	 System.out.printf("Area: %.2f\n", (shape).getArea());
+	 System.out.println();
+	 }
+	 else
+	 {    shape3D = (ThreeDimensionalShapes)shape;
+	 System.out.printf("Area: %.2f\n", shape.getArea());
+	 System.out.printf("Volume: %.2f\n", shape3D.getVolume());
+	 System.out.println();
+	   }
+	  }
+	 }
+	
+	
+}
